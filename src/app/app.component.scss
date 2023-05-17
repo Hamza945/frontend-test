@@ -64,6 +64,15 @@
     img{
         margin: 0 16px;
     }
+    i {
+      background: black;
+      padding: 10px 13px;
+      border-radius: 6px;
+      &.bi-map{
+        background-color:  rgb(243, 243, 242);
+        color: black;
+      }
+    }
 }
   ::ng-deep .toolbar img {
     margin: 0 16px;
