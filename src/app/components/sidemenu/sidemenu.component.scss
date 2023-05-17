@@ -1,0 +1,27 @@
+.nav.nav-pills {
+    width: auto;
+    min-width: 30%;
+    border-right: 1px solid #1111111a;
+    li {
+        a {
+            span.d-sm-inline {
+                display: none !important;
+            }
+        }
+        &.active{
+            width: 100%;
+            border-right: 2px solid rgb(255, 56, 92);
+        }
+    }
+}
+
+.nav.nav-pills:hover {
+    width: 100% ;
+    li {
+        a {
+            span.d-sm-inline {
+                display: inline-block !important;
+            }
+        }
+    }
+}
