@@ -198,3 +198,111 @@ body *{
 .main-content-holder {
   transition: all 0.5s ease-in-out;
 }
+
+#offcanvasRight.offcanvas-end{
+  top: 144px;
+  border-bottom-width: 0px;
+  border-color: rgba(17, 17, 17, 0.1);
+  border-left-width: 1px;
+  border-right-width: 0px;
+  border-style: solid;
+  border-top-width: 0px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.12) -8px 0px 40px 0px;
+  .offcanvas-body{
+    padding: 24px 24px;
+    .filter-head{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      h5{
+        font-family: "Inter-SemiBold", "Inter", sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: rgb(17, 17, 17);
+      }
+      p{
+        font-size: 14px;
+        line-height: 20px;
+        color: rgb(113, 113, 113);
+        &.clear-all{
+          color: #d33b50;
+        }
+      }
+      &.price{
+        flex-direction: column;
+        .min-p, .max-p {
+          p{
+            font-size: 12px;
+            line-height: 20px;
+            color: rgb(113, 113, 113);
+            margin-bottom: 8px;
+          }
+          .form-control{
+            background-color: transparent;
+            border-radius: 12px;
+            &:focus{
+              border: 1px solid #ced4da;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+      &.type-of-places{
+        .form-check-input{
+          width: 1.2em;
+          height: 1.2em;
+        }
+        label{
+          font-weight: 400;
+          color: #717171;
+        }
+        label,p{
+          margin-left: 8px;
+        }
+      }
+      &.types{
+        span.chip {
+          border: 1px solid rgba(17, 17, 17, 0.2);
+          border-radius: 35px;
+          margin: 3px;
+          width: 48px;
+          height: 37px;
+          font-size: 15px;
+          text-align: center;
+          vertical-align: revert;
+          display: inline-flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          &:hover {
+            border: 1px solid black !important;
+        }
+          &.active{
+            background-color: rgb(0 0 0);
+            color: #8d8d8d;
+          }
+        }
+      }
+    }
+    hr{
+      background-color: rgba(17, 17, 17, 0.1);
+      border: 0;
+      opacity: 1;
+    }
+  }
+  .submit{
+    .roundeds{
+      border-radius: 12px;
+      font-size: 14px;
+      min-height: 48px;
+      background-color: #e8abba;
+      border-color: #e8abba;
+    }
+  }
+}
+.modal-backdrop.show
+{
+  opacity: 0;
+}

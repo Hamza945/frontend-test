@@ -130,3 +130,556 @@
     }
   }
 }
+
+
+.overlay {
+  opacity: 0;
+  position: fixed;
+  z-index: 10;
+  left: 100%;
+  display: none;
+  &.active {
+    opacity: 1;
+    left: 0;
+  }
+  .overlay-bg {
+    background-color: rgba(17, 17, 17, 0.4);
+    inset: 0px;
+    position: fixed;
+    user-select: none;
+    z-index: 9;
+  }
+  .close-btn {
+    background-color: rgb(255, 255, 255);
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+  }
+  .main-overlay-content {
+    place-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex: 0 0 auto;
+    flex-flow: column nowrap;
+    gap: 32px;
+    height: 100vh;
+    max-width: 1440px;
+    overflow: auto;
+    padding: 32px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 75%;
+    z-index: 11;
+    .overlay-content-images {
+      place-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row nowrap;
+      gap: 16px;
+      height: 480px;
+      overflow: visible;
+      padding: 0px;
+      position: relative;
+      width: 100%;
+      .left-image {
+        border-radius: 20px;
+        flex: 0 0 auto;
+        height: 480px;
+        position: relative;
+        width: 60%;
+        .view-more-images {
+          background-color: rgb(255, 255, 255);
+          border-radius: 12px;
+          bottom: 16px;
+          min-height: 36px;
+          left: 16px;
+          padding: 12px 16px;
+          position: absolute;
+          z-index: 1;
+          font-size: 14px;
+          line-height: 1.2;
+          color: rgb(17, 17, 17);
+          display: inline-block;
+          vertical-align: top;
+          text-decoration: none;
+        }
+      }
+      .right-images {
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex: 1 0 0px;
+        flex-flow: column nowrap;
+        gap: 16px;
+        height: 100%;
+        overflow: visible;
+        padding: 0px;
+        position: relative;
+        .image-holder {
+          border-radius: 20px;
+          flex: 1 0 0;
+          position: relative;
+          width: 100%;
+          height: 48%;
+        }
+      }
+
+      aa {
+        place-content: center flex-start;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        border-radius: 12px;
+        bottom: 16px;
+        display: flex;
+        flex: 0 0 auto;
+        flex-flow: row nowrap;
+        gap: 12px;
+        height: 36px;
+        left: 16px;
+        overflow: visible;
+        padding: 12px 16px;
+        position: absolute;
+        width: min-content;
+        z-index: 1;
+      }
+    }
+    .overlay-info-content {
+      place-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row nowrap;
+      gap: 32px;
+      height: min-content;
+      overflow: visible;
+      padding: 0px;
+      position: relative;
+      width: 100%;
+      .hotel-info-holder {
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex: 1 0 0px;
+        flex-flow: column nowrap;
+        gap: 40px;
+        height: min-content;
+        overflow: visible;
+        padding: 0px;
+        position: relative;
+        width: 1px;
+        .hotel-name-detail {
+          place-content: flex-start;
+          align-items: flex-start;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: column nowrap;
+          gap: 32px;
+          height: min-content;
+          overflow: visible;
+          padding: 0px;
+          position: relative;
+          width: 100%;
+        }
+        .hotel-label {
+          color: #111;
+          background-color: rgb(255, 255, 255);
+          display: flex;
+          align-items: center;
+          flex: 0 0 auto;
+          flex-flow: row nowrap;
+          gap: 8px;
+          overflow: visible;
+          padding: 12px;
+          position: relative;
+        }
+        .name-holder {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          h2 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 40px;
+            color: rgb(17, 17, 17);
+          }
+          .share-holder {
+            display: flex;
+            align-items: center;
+            margin: 0 -5px;
+            i {
+              width: 36px;
+              height: 36px;
+              background: #f5f5f4;
+              border-radius: 50%;
+              color: #111;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 0 5px;
+            }
+          }
+          p {
+            font-size: 16px;
+            color: #717171;
+            flex: 100%;
+          }
+        }
+        .rooms-details {
+          width: 100%;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.04);
+          ul {
+            padding: 0;
+            margin: 0 -10px;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            li {
+              padding: 0 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              i {
+                padding-right: 10px;
+              }
+            }
+          }
+        }
+        .booking-terms {
+          border-bottom: 1px solid rgba(17, 17, 17, 0.04);
+          place-content: flex-start;
+          align-items: flex-start;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: row nowrap;
+          gap: 32px;
+          height: min-content;
+          overflow: visible;
+          padding: 0 0 20px;
+          position: relative;
+          width: 100%;
+          .booking-terms-box {
+            place-content: flex-start center;
+            align-items: flex-start;
+            border-radius: 20px;
+            display: flex;
+            flex: 1 0 0;
+            flex-flow: column nowrap;
+            gap: 16px;
+            height: min-content;
+            overflow: visible;
+            padding: 0px;
+            position: relative;
+            width: 1px;
+            .icon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 56px;
+              height: 56px;
+              background: #fef8f8;
+              font-size: 20px;
+              color: #d33c51;
+              border-radius: 50%;
+            }
+            h3 {
+              font-size: 16px;
+              color: #111;
+              margin: 0;
+            }
+            p {
+              font-size: 14px;
+              color: #717171;
+            }
+
+          }
+        }
+        .sub-description-text {
+          place-content: flex-start;
+          align-items: flex-start;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: column nowrap;
+          gap: 32px;
+          height: min-content;
+          overflow: hidden;
+          padding: 0;
+          position: relative;
+          width: 100%;
+          .text-holder {
+            h3 {
+              font-size: 18px;
+              color: #111;
+              margin: 0;
+            }
+            p {
+              font-size: 14px;
+              color: #717171;
+            }
+          }
+          a {
+            color: #d33c51;
+            font-size: 14px;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .booking-details {
+        place-content: flex-start;
+        align-items: flex-start;
+        display: flex;
+        flex: 0 0 auto;
+        flex-flow: column nowrap;
+        gap: 48px;
+        height: min-content;
+        overflow: hidden;
+        padding: 0px;
+        position: sticky;
+        top: -32px;
+        width: min-content;
+        will-change: transform;
+        z-index: 1;
+        .booking-details-box {
+          border: 1px solid rgba(17, 17, 17, 0.04);
+          place-content: flex-start;
+          align-items: flex-start;
+          background-color: rgb(245, 245, 244);
+          border-radius: 20px;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: column nowrap;
+          gap: 24px;
+          min-height: 558px;
+          overflow: visible;
+          padding: 24px;
+          position: sticky;
+          top: 32px;
+          width: 360px;
+          will-change: transform;
+          z-index: 1;
+        }
+        .room-price-holder {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .room-price {
+            font-size: 24px;
+            color: #111;
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+        .checkIn-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .check-in-out {
+            width: 48%;
+            > span {
+              font-size: 12px;
+              color: #717171;
+            }
+            .input-box {
+              border: 1px solid rgba(17, 17, 17, 0.04);
+              background-color: rgb(255, 255, 255);
+              border-radius: 12px;
+              opacity: 1;
+              place-content: center flex-start;
+              align-items: center;
+              display: flex;
+              flex-flow: row nowrap;
+              height: 48px;
+              overflow: visible;
+              padding: 12px 16px;
+              position: relative;
+              width: 100%;
+              font-size: 14px;
+              gap: 12px;
+              color: #111;
+              &:hover {
+                border-color: #111;
+              }
+            }
+          }
+        }
+        .guests-list {
+          width: 100%;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.04);
+          > span {
+            font-size: 12px;
+            color: #717171;
+          }
+          .input-box {
+            border: 1px solid rgba(17, 17, 17, 0.04);
+            background-color: rgb(255, 255, 255);
+            border-radius: 12px;
+            opacity: 1;
+            place-content: center space-between;
+            align-items: center;
+            display: flex;
+            flex-flow: row nowrap;
+            height: 48px;
+            overflow: visible;
+            padding: 12px 16px;
+            position: relative;
+            width: 100%;
+            font-size: 14px;
+            gap: 12px;
+            color: #111;
+            &:hover {
+              border-color: #111;
+            }
+          }
+        }
+        .fee-details {
+          width: 100%;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.04);
+          ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            place-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: 0 0 auto;
+            flex-flow: column nowrap;
+            gap: 12px;
+            height: min-content;
+            overflow: visible;
+            position: relative;
+            li {
+              place-content: flex-start;
+              align-items: flex-start;
+              display: flex;
+              flex: 0 0 auto;
+              flex-flow: row nowrap;
+              gap: 4px;
+              height: min-content;
+              overflow: visible;
+              padding: 0px;
+              position: relative;
+              width: 100%;
+              justify-content: space-between;
+              font-size: 14px;
+              color: #111;
+            }
+          }
+        }
+        .total-price-holder {
+          place-content: flex-start;
+          align-items: flex-start;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: row nowrap;
+          gap: 4px;
+          height: min-content;
+          overflow: visible;
+          padding: 0px;
+          position: relative;
+          width: 312px;
+          .total-text {
+            place-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 0px;
+            flex-flow: column nowrap;
+            gap: 4px;
+            height: min-content;
+            overflow: visible;
+            padding: 0px;
+            position: relative;
+            width: 1px;
+            font-size: 16px;
+            color: #111;
+            span {
+              font-size: 12px;
+              color: #717171;
+            }
+          }
+          .total-price {
+            font-size: 16px;
+            color: #111;
+          }
+        }
+        .btn-reserved {
+          width: 100%;
+          a {
+            background: linear-gradient(95.006deg, rgb(211, 59, 80) 0%, rgb(198, 47, 101) 100%);
+            border-radius: 12px;
+            opacity: 1;
+            place-content: center;
+            align-items: center;
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 10px;
+            height: 48px;
+            overflow: visible;
+            padding: 8px 24px;
+            position: relative;
+            width: 100%;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+        .rare-find {
+          place-content: flex-start;
+          align-items: flex-start;
+          background-color: rgba(212, 59, 81, 0.04);
+          border-radius: 20px;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: row nowrap;
+          gap: 24px;
+          height: 112px;
+          overflow: visible;
+          padding: 24px;
+          position: relative;
+          width: 100%;
+          .fa-gem {
+            font-size: 38px;
+            color: #e21d5f;
+          }
+          .text {
+            place-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 0px;
+            flex-flow: column nowrap;
+            gap: 4px;
+            height: min-content;
+            overflow: visible;
+            padding: 0px;
+            position: relative;
+            width: 1px;
+            h3 {
+              font-size: 16px;
+              color: #111;
+              margin: 0;
+            }
+            p {
+              font-size: 14px;
+              color: #717171;
+            }
+          }
+        }
+      }
+    }
+  }
+}

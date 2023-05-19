@@ -54,11 +54,10 @@
     </div>
   </div>
 
-  <button class="side-filters" >
+  <button class="side-filters" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
     <i class="fa fa-filter"></i>
   </button>
 </div>
-
 <div class="container-fluid">
   <div class="row flex-nowrap">
     <div class="col-auto sideMenu-holder">
@@ -69,6 +68,105 @@
       <app-main-content-card></app-main-content-card>
     </div>
   </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <!-- <div class="offcanvas-header">
+    <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div> -->
+  <div class="offcanvas-body">
+    <div class="filter-head">
+      <h5>Filters</h5>
+      <p class="clear-all">Clear All</p>
+    </div>
+    <hr class="hr my-2" />
+    <div class="filter-head price mt-4">
+      <h5>Price range</h5>
+      <p>The average nightly price is $133</p>
+      <div class="prices row d-flex flex-row justify-content-between">
+      <div class="min-p col-6">
+        <p>Min Price</p>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg" readonly placeholder="$0" aria-label="min-price" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      <div class="max-p col-6">
+        <p>Min Price</p>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control form-control-lg" readonly placeholder="$500" aria-label="max-price" aria-describedby="basic-addon1">
+        </div>
+      </div>
+      </div>
+    </div>
+    <hr class="hr my-2" />
+    <div class="filter-head price type-of-places mt-4">
+      <h5>Type Of Place</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Entire Place
+        </label>
+        <p>A place all to yourself</p>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Private room
+        </label>
+        <p>Your own room in a home or a hotel, plus some shared common spaces.</p>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Shared room
+        </label>
+        <p>A sleeping space and common areas that may be shared with others.</p>
+      </div>
+     
+    </div>
+    <hr class="hr my-2" />
+    <div class="filter-head types price mt-4">
+      <h5>Rooms, Beds And Baths</h5>
+      <div class="prices d-flex flex-column mt-3">
+        <p class="my-2">Bedrooms</p>
+        <div class="min-p"> 
+          <span class="chip active">Any</span>
+          <span class="chip">1</span>
+          <span class="chip">2</span>
+          <span class="chip">3</span>
+          <span class="chip">4</span>
+          <span class="chip">5+</span>
+        </div>
+      </div>
+      <div class="prices d-flex flex-column mt-3">
+        <p class="my-2">Beds</p>
+        <div class="min-p"> 
+          <span class="chip active">Any</span>
+          <span class="chip">1</span>
+          <span class="chip">2</span>
+          <span class="chip">3</span>
+          <span class="chip">4</span>
+          <span class="chip">5+</span>
+        </div>
+      </div>
+      <div class="prices d-flex flex-column mt-3">
+        <p class="my-2">Bathrooms</p>
+        <div class="min-p"> 
+          <span class="chip active">Any</span>
+          <span class="chip">1</span>
+          <span class="chip">2</span>
+          <span class="chip">3</span>
+          <span class="chip">4</span>
+          <span class="chip">5+</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="hr mb-3 mt-0" />
+  <div class="row text-center col-10 mx-auto submit mb-3">
+    <button type="button" class="roundeds btn btn-lg btn-danger" disabled>Show 836 Homes</button>
+  </div>
+</div>
 </div>
 
 <router-outlet></router-outlet>
