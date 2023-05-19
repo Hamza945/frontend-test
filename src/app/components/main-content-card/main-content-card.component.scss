@@ -1,0 +1,132 @@
+.card-wrapper {
+  display: grid;
+  flex: 1 0 0px;
+  gap: 24px;
+  grid-auto-rows: minmax(0px, 1fr);
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-rows: repeat(2, minmax(0px, 1fr));
+  height: 100%;
+  justify-content: center;
+  padding: 32px;
+  position: relative;
+  .main-card-wrapper-link {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: none;
+    transform: none;
+    transform-origin: 50% 50% 0px;
+    opacity: 1;
+    place-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    height: 100%;
+  }
+  .main-card{
+    place-self: start;
+    flex: 0 0 auto;
+    height: auto;
+    position: relative;
+    width: 100%;
+    .main-card-wrapper-link{
+      .main-card-img{
+        flex: 0 0 auto;
+        height: 200px;
+        position: relative;
+        width: 100%;
+      }
+    }
+  }
+
+  .main-card-text {
+    place-content: flex-start space-between;
+    align-items: flex-start;
+    display: flex;
+    flex: 1 0 auto;
+    flex-flow: column nowrap;
+    min-height: 180px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    color: #717171;
+    font-size: 14px;
+    .text-holder {
+      place-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: column nowrap;
+      gap: 8px;
+      height: min-content;
+      overflow: visible;
+      padding: 0px;
+      position: relative;
+      width: 100%;
+    }
+    .card-price-holder {
+      place-content: center space-between;
+      align-items: center;
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row nowrap;
+      height: min-content;
+      overflow: visible;
+      padding: 0px;
+      position: relative;
+      width: 100%;
+      .price-holder {
+        place-content: center flex-start;
+        align-items: center;
+        display: flex;
+        flex: 1 0 0px;
+        flex-flow: row nowrap;
+        gap: 0px;
+        height: 20px;
+        overflow: visible;
+        padding: 0px;
+        position: relative;
+      }
+      .rating {
+        color: #111;
+      }
+    }
+    h2 {
+      color: #111;
+      margin: 0;
+      font-size: 18px;
+
+    }
+    p {
+      margin: 0;
+    }
+    .price {
+      color: #111;
+    }
+  }
+  .liked-icon {
+    height: 36px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 36px;
+    z-index: 1;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111;
+    &:hover {
+      background: #000;
+      color: #fff;
+    }
+  }
+}

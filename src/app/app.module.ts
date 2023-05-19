@@ -11,13 +11,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { MainContentCardComponent } from './components/main-content-card/main-content-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    MainContentCardComponent
   ],
   imports: [
     BrowserModule,
