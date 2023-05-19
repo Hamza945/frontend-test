@@ -45,7 +45,7 @@
       </select>
     </div>
     <div class="booking-info-framer-holder">
-      <input type="date" class="booking-info-framer">
+      <input type="date" [ngModel] ="currentDate | date:'yyyy-MM-dd'" class="booking-info-framer">
     </div>
     <div class="booking-info-quests-no">
       <i class="fa fa-minus"></i>

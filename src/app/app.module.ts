@@ -12,7 +12,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { MainContentCardComponent } from './components/main-content-card/main-content-card.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +24,7 @@ import { MainContentCardComponent } from './components/main-content-card/main-co
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
 
     MatSlideToggleModule,
      BrowserAnimationsModule
