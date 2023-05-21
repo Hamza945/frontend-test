@@ -354,6 +354,61 @@
               </div>
             </div>
             <hr class="hr my-4" />
+            <div class="googleMapSec name-holder">
+              <div class="holder">
+                <h5>Where you'll be</h5>
+              </div>
+              <div class="googleMap">
+                <google-map height="400px"
+                            width="543px"
+                            [center]="center"
+                            [zoom]="zoom"
+                            (mapClick)="moveMap($event)"
+                            (mapMousemove)="move($event)">
+                </google-map>
+              </div>
+            <div class="holder">
+              <h5>Whitefish, Montana, United States</h5>
+              <p>The property, given its close proximity to the refreshing hillside town of Tagaytay and clear blue beaches of Nasugbu, provides a quick escape from the hustle and bustle of city life.</p>
+            </div>
+            <a href="#">View more</a>
+            </div>
+            <hr class="hr my-4" />
+            <div class="googleMapSec name-holder">
+              <div class="holder">
+                <h5>Host</h5>
+              </div>
+                <div class="userinfo">
+                  <div class="img"> 
+                    <img src="https://framerusercontent.com/images/Jc9D7O4ihy2vSsSvjtWRRQPffjw.png" alt="userinfo">
+                  </div>
+                  <div class="name">
+                    <strong>Hosted by Brenda</strong>
+                    <span>Joined in August 2014</span>
+                  </div>
+                  <div class="btncontact">
+                    <button type="button" class="roundeds btn btn-lg btn-outline-danger btn-block">Contact Host</button>
+                  </div>
+                  <div class="btncontact hostRate">
+                    <div class="rating">
+                      <i class="fa fa-star"></i>
+                        2635 Reviews
+                    </div>
+                    <div class="rating">
+                      <i class="fa fa-sharp fa-light fa-clipboard"></i>
+                      Identity verified
+                    </div>
+                    <div class="rating">
+                      <i class="fa fa-medal"></i>
+                      Superhost
+                    </div>
+                  </div>
+              </div>
+            <div class="holder">
+              <p>As a mother of 4, living in Solana Beach for 25+ years, I love to help families enjoy our beautiful area. Vacations are special and we do our very best to make them affordable, enjoy…</p>
+            </div>
+            <a href="#">View more</a>
+            </div>
           </div>
         </div>
         <div class="booking-details">

@@ -370,6 +370,59 @@
               color: #717171;
               flex: 100%;
             }
+            &.googleMapSec{
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+              flex-direction: column;
+              width: 100%;
+              overflow: hidden;
+              gap: 25px;
+              .googleMap{
+                width: 100%;
+                overflow: hidden;
+                border-radius: 30px;
+              }
+              a{
+                color: #d33c51;
+                font-size: 14px;
+                text-decoration: none;
+                font-weight: 500;
+              }
+              .userinfo{
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: self-start;
+                gap: 10px;
+                width: 100%;
+                img{
+                  width: 65px;
+                  height: 65px;
+                  border-radius: 100px;
+                }
+                .name{
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: flex-start;
+                }
+                .btncontact{
+                  width: 100%;
+                  .btn{
+                    width: 100%;
+                  }
+                  &.hostRate{
+                    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0px 0px 0;
+                  }
+                }
+              }
+            }
           }
           .rooms-details {
             width: 100%;
