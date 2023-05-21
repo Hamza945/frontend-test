@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
 
+## Run Local App
+
+### Steps
+1- Clone the project usine git command "git clone https://github.com/Hamza945/frontend-test.git"
+2- Run `npm install` for install all required packges.
+3- Run `npm start`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
