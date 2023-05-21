@@ -170,9 +170,6 @@ body *{
         width: 32px;
         color: #cd365a;
       }
-      .text {
-
-      }
     }
   }
   .side-filters {
@@ -199,7 +196,9 @@ body *{
   transition: all 0.5s ease-in-out;
 }
 
-.modal-backdrop.show
-  {
-    opacity: 0;
-  }
+app-search-filter {
+  .modal-backdrop.fade.show
+    {
+      opacity: 0 !important;
+    }
+}

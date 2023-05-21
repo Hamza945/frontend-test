@@ -1,24 +1,22 @@
 <div class="card-wrapper">
-
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
+  <div *ngFor="let room of JsonObj.data; let i = index" class="main-card">
+    <a data-bs-toggle="offcanvas" (click)="checkRoomDetail(room)" href="#openViewRoom" role="button" aria-controls="openViewRoom" class="main-card-wrapper-link">
       <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/TQv9Req7ZME40dmudtRtkwz9lcQ.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
+        <img [src]="room.imgUrl" alt="image" class="roomImg" >
       </div>
       <div class="main-card-text">
         <div class="text-holder">
-          <h2>Whitefish Estate</h2>
-          <p>Whitefish, Montana, United States</p>
+          <h2>{{room.heading}}</h2>
+          <p>{{room.subHeading}}</p>
         </div>
         <div class="card-price-holder">
           <div class="price-holder">
-            <span class="price">$10,000</span>
-            <span> / night</span>
+            <span class="price">{{room.price}}</span>
+            <span> / {{room.day}}</span>
           </div>
           <div class="rating">
             <i class="fa fa-star"></i>
-            5.0
+            {{room.rating}}
           </div>
         </div>
       </div>
@@ -27,371 +25,171 @@
       </span>
     </a>
   </div>
-
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
-      <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/afIWyPD7bAqXpOTuGYeO4FzrnU.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-      </div>
-      <div class="main-card-text">
-        <div class="text-holder">
-          <h2>Luxury stay in Weston, Saint James, Barbados</h2>
-          <p>Weston, Saint James, Barbados</p>
-        </div>
-        <div class="card-price-holder">
-          <div class="price-holder">
-            <span class="price">$1,500</span>
-            <span> / night</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            5.0
-          </div>
-        </div>
-      </div>
-      <span class="liked-icon">
-        <i class="far fa-heart"></i>
-      </span>
-    </a>
-  </div>
-
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
-      <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/wTSsHOfD0gXYkODZBWWWOfdkw.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-      </div>
-      <div class="main-card-text">
-        <div class="text-holder">
-          <h2>Numero 22 - Lake Como - Design Living & Lake View</h2>
-          <p>Laglio, Lombardia, Italy</p>
-        </div>
-        <div class="card-price-holder">
-          <div class="price-holder">
-            <span class="price">$359</span>
-            <span> / night</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            5.0
-          </div>
-        </div>
-      </div>
-      <span class="liked-icon">
-        <i class="far fa-heart"></i>
-      </span>
-    </a>
-  </div>
-
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
-      <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/3E8SIyOR9oYK20P1hy1BtAelgI.webp" alt="" style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-      </div>
-      <div class="main-card-text">
-        <div class="text-holder">
-          <h2>7,500 sq ft Private Beachfront Estate</h2>
-          <p>Dubai, United Arab Emirates</p>
-        </div>
-        <div class="card-price-holder">
-          <div class="price-holder">
-            <span class="price">$2,478</span>
-            <span> / night</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            4.73
-          </div>
-        </div>
-      </div>
-      <span class="liked-icon">
-        <i class="far fa-heart"></i>
-      </span>
-    </a>
-  </div>
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
-      <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/TQv9Req7ZME40dmudtRtkwz9lcQ.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-      </div>
-      <div class="main-card-text">
-        <div class="text-holder">
-          <h2>Whitefish Estate</h2>
-          <p>Whitefish, Montana, United States</p>
-        </div>
-        <div class="card-price-holder">
-          <div class="price-holder">
-            <span class="price">$10,000</span>
-            <span> / night</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            5.0
-          </div>
-        </div>
-      </div>
-      <span class="liked-icon">
-        <i class="far fa-heart"></i>
-      </span>
-    </a>
-  </div>
-
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
-      <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/afIWyPD7bAqXpOTuGYeO4FzrnU.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-      </div>
-      <div class="main-card-text">
-        <div class="text-holder">
-          <h2>Luxury stay in Weston, Saint James, Barbados</h2>
-          <p>Weston, Saint James, Barbados</p>
-        </div>
-        <div class="card-price-holder">
-          <div class="price-holder">
-            <span class="price">$1,500</span>
-            <span> / night</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            5.0
-          </div>
-        </div>
-      </div>
-      <span class="liked-icon">
-        <i class="far fa-heart"></i>
-      </span>
-    </a>
-  </div>
-
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
-      <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/wTSsHOfD0gXYkODZBWWWOfdkw.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-      </div>
-      <div class="main-card-text">
-        <div class="text-holder">
-          <h2>Numero 22 - Lake Como - Design Living & Lake View</h2>
-          <p>Laglio, Lombardia, Italy</p>
-        </div>
-        <div class="card-price-holder">
-          <div class="price-holder">
-            <span class="price">$359</span>
-            <span> / night</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            5.0
-          </div>
-        </div>
-      </div>
-      <span class="liked-icon">
-        <i class="far fa-heart"></i>
-      </span>
-    </a>
-  </div>
-
-  <div class="main-card">
-    <a href="#" class="main-card-wrapper-link">
-      <div class="main-card-img">
-        <img src="https://framerusercontent.com/images/wTSsHOfD0gXYkODZBWWWOfdkw.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-      </div>
-      <div class="main-card-text">
-        <div class="text-holder">
-          <h2>7,500 sq ft Private Beachfront Estate</h2>
-          <p>Dubai, United Arab Emirates</p>
-        </div>
-        <div class="card-price-holder">
-          <div class="price-holder">
-            <span class="price">$2,478</span>
-            <span> / night</span>
-          </div>
-          <div class="rating">
-            <i class="fa fa-star"></i>
-            4.73
-          </div>
-        </div>
-      </div>
-      <span class="liked-icon">
-        <i class="far fa-heart"></i>
-      </span>
-    </a>
-  </div>
-
 </div>
-
-
-<div class="overlay active">
-  <div class="overlay-bg" tabindex="0" style="opacity: 1;"></div>
-  <a href="#" class="close-btn">
-    <i class="fa fa-times"></i>
-  </a>
-  <div class="main-overlay-content">
-    <div class="overlay-content-images">
-      <div class="left-image">
-        <img src="https://framerusercontent.com/images/afIWyPD7bAqXpOTuGYeO4FzrnU.webp" alt=""
-             style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-        <a href="#" class="view-more-images">View All Photos</a>
-      </div>
-      <div class="right-images">
-        <div class="image-holder">
-          <img src="https://framerusercontent.com/images/UbZMotnt6f6PzRjoEUkUqqPoGE.webp" alt=""
-               style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
+<!-- Modal -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="openViewRoom" aria-labelledby="openViewRoomLabel">
+  <button type="button" class="close-view btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <div class="offcanvas-body">
+    <div class="main-overlay-content">
+      <div class="overlay-content-images">
+        <div class="left-image">
+          <img [src]="openRoomDetail.imgUrl" alt="image" class="roomImg">
+          <a href="#" class="view-more-images">View All Photos</a>
         </div>
-        <div class="image-holder">
-          <img src="https://framerusercontent.com/images/qpfhB78P3kED99kanRfNuDVscmY.webp" alt=""
-               style="pointer-events: none; user-select: none; display: block; width: 100%; height: 100%; border-radius: inherit; object-position: center center; object-fit: cover; image-rendering: auto;">
-        </div>
-      </div>
-    </div>
-    <div class="overlay-info-content">
-      <div class="hotel-info-holder">
-        <div class="hotel-name-detail">
-          <span class="hotel-label">
-            <i class="fa fa-medal"></i>
-            Superhost
-          </span>
-          <div class="name-holder">
-            <div class="holder">
-              <h2>Luxury stay in Weston, Saint James, Barbados</h2>
-            </div>
-            <div class="share-holder">
-              <i class="fa fa-share-square"></i>
-              <i class="fa fa-heart"></i>
-            </div>
-            <p>Weston, Saint James, Barbados</p>
+        <div class="right-images">
+          <div class="image-holder">
+            <img [src]="openRoomDetail.imgUrl2" alt="image" class="roomImg">
           </div>
-          <div class="rooms-details">
-            <ul>
-              <li>
-                <i class="fa fa-users"></i>
-                <span>8 guests</span>
-              </li>
-              <li>
-                <i class="fa fa-bed"></i>
-                <span>4 bedrooms</span>
-              </li>
-              <li>
-                <i class="fa fa-bed"></i>
-                <span>5 beds</span>
-              </li>
-              <li>
-                <i class="fa fa-bath"></i>
-                <span>4 baths</span>
-              </li>
-            </ul>
-          </div>
-          <div class="booking-terms">
-            <div class="booking-terms-box">
-              <span class="icon">
-                <i class="fa fa-tv"></i>
-              </span>
-              <h3>Dedicated workspace</h3>
-              <p>A private room with wifi that’s well-suited for working.</p>
-            </div>
-            <div class="booking-terms-box">
-              <span class="icon">
-                <i class="fa fa-tv"></i>
-              </span>
-              <h3>Self check-in</h3>
-              <p>Check yourself in with the keypad.</p>
-            </div>
-            <div class="booking-terms-box">
-              <span class="icon">
-                <i class="fa fa-tv"></i>
-              </span>
-              <h3>Free cancellation before Jul 25</h3>
-              <p>A private room with wifi that’s well-suited for working.</p>
-            </div>
-          </div>
-          <div class="sub-description-text">
-            <div class="text-holder">
-              <h3>About this space</h3>
-              <p>Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.</p>
-            </div>
-
-            <div class="text-holder">
-              <h3>The space</h3>
-              <p>An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.</p>
-            </div>
-            <a href="#">Read more</a>
+          <div class="image-holder">
+            <img [src]="openRoomDetail.imgUrl3" alt="image" class="roomImg">
           </div>
         </div>
       </div>
-      <div class="booking-details">
-        <div class="booking-details-box">
-          <div class="room-price-holder">
-            <div class="room-price">$1,500 <span>/ night</span></div>
-            <div class="room-rating">
-              <i class="fa fa-star"></i>
-              5.0
+      <div class="overlay-info-content">
+        <div class="hotel-info-holder">
+          <div class="hotel-name-detail">
+            <span class="hotel-label">
+              <i class="fa fa-medal"></i>
+              Superhost
+            </span>
+            <div class="name-holder">
+              <div class="holder">
+                <h2>{{openRoomDetail.heading}}</h2>
+              </div>
+              <div class="share-holder">
+                <i class="fa fa-share-square"></i>
+                <i class="fa fa-heart"></i>
+              </div>
+              <p>{{openRoomDetail.subHeading}}</p>
             </div>
-          </div>
-          <div class="checkIn-info">
-            <div class="check-in-out">
-              <span>Check In</span>
-              <div class="input-box">
-                <i class="fa fa-calendar"></i>
-                <span>6/14/2023</span>
+            <div class="rooms-details">
+              <ul>
+                <li>
+                  <i class="fa fa-users"></i>
+                  <span>8 guests</span>
+                </li>
+                <li>
+                  <i class="fa fa-bed"></i>
+                  <span>4 bedrooms</span>
+                </li>
+                <li>
+                  <i class="fa fa-bed"></i>
+                  <span>5 beds</span>
+                </li>
+                <li>
+                  <i class="fa fa-bath"></i>
+                  <span>4 baths</span>
+                </li>
+              </ul>
+            </div>
+            <div class="booking-terms">
+              <div class="booking-terms-box">
+                <span class="icon">
+                  <i class="fa fa-tv"></i>
+                </span>
+                <h3>Dedicated workspace</h3>
+                <p>A private room with wifi that’s well-suited for working.</p>
+              </div>
+              <div class="booking-terms-box">
+                <span class="icon">
+                  <i class="fa fa-tv"></i>
+                </span>
+                <h3>Self check-in</h3>
+                <p>Check yourself in with the keypad.</p>
+              </div>
+              <div class="booking-terms-box">
+                <span class="icon">
+                  <i class="fa fa-tv"></i>
+                </span>
+                <h3>Free cancellation before Jul 25</h3>
+                <p>A private room with wifi that’s well-suited for working.</p>
               </div>
             </div>
-            <div class="check-in-out">
-              <span>Check In</span>
+            <div class="sub-description-text">
+              <div class="text-holder">
+                <h3>About this space</h3>
+                <p>Enjoy a quiet getaway in this charming cottage renovated, designed, and owned by Chip and Joanna Gaines. Originally the carriage house for Hillcrest Estate, this home includes one bedroom, one bath, an office nook and a private back patio. This makes it the perfect getaway for a party of two, or if you’re stopping through town and need a restful place to retreat.</p>
+              </div>
+  
+              <div class="text-holder">
+                <h3>The space</h3>
+                <p>An open living, dining, and kitchen area provide ample room in this cozy cottage. French double doors lead you out to the back patio to enjoy your own private outdoor space. A dedicated, covered parking spot for your use. The parking lot is shared with Hillcrest Estate guests.</p>
+              </div>
+              <a href="#">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="booking-details">
+          <div class="booking-details-box">
+            <div class="room-price-holder">
+              <div class="room-price">{{openRoomDetail.price}} <span>/ {{openRoomDetail.day}}</span></div>
+              <div class="room-rating">
+                <i class="fa fa-star"></i>
+                {{openRoomDetail.rating}}
+              </div>
+            </div>
+            <div class="checkIn-info">
+              <div class="check-in-out">
+                <span>Check In</span>
+                <div class="input-box">
+                  <i class="fa fa-calendar"></i>
+                  <span>6/14/2023</span>
+                </div>
+              </div>
+              <div class="check-in-out">
+                <span>Check In</span>
+                <div class="input-box">
+                  <i class="fa fa-calendar"></i>
+                  <span>6/21/2023</span>
+                </div>
+              </div>
+            </div>
+            <div class="guests-list">
+              <span>Guests</span>
               <div class="input-box">
-                <i class="fa fa-calendar"></i>
                 <span>6/21/2023</span>
+                <i class="fa fa-chevron-down"></i>
               </div>
             </div>
-          </div>
-          <div class="guests-list">
-            <span>Guests</span>
-            <div class="input-box">
-              <span>6/21/2023</span>
-              <i class="fa fa-chevron-down"></i>
+            <div class="fee-details">
+              <ul>
+                <li>
+                  <span>
+                    6 nights
+                    <i class="fa fa-info-circle"></i>
+                  </span>
+                  <span>$2,199</span>
+                </li>
+                <li>
+                  <span>
+                    Cleaning fee
+                    <i class="fa fa-info-circle"></i>
+                  </span>
+                  <span>$85</span>
+                </li>
+                <li>
+                  <span>
+                    Airbnb service fee
+                    <i class="fa fa-info-circle"></i>
+                  </span>
+                  <span>$322</span>
+                </li>
+              </ul>
+            </div>
+            <div class="total-price-holder">
+              <div class="total-text">Total <span>Before taxes</span></div>
+              <div class="total-price">$2,606</div>
+            </div>
+            <div class="btn-reserved">
+              <a href="#">Reserved</a>
             </div>
           </div>
-          <div class="fee-details">
-            <ul>
-              <li>
-                <span>
-                  6 nights
-                  <i class="fa fa-info-circle"></i>
-                </span>
-                <span>$2,199</span>
-              </li>
-              <li>
-                <span>
-                  Cleaning fee
-                  <i class="fa fa-info-circle"></i>
-                </span>
-                <span>$85</span>
-              </li>
-              <li>
-                <span>
-                  Airbnb service fee
-                  <i class="fa fa-info-circle"></i>
-                </span>
-                <span>$322</span>
-              </li>
-            </ul>
-          </div>
-          <div class="total-price-holder">
-            <div class="total-text">Total <span>Before taxes</span></div>
-            <div class="total-price">$2,606</div>
-          </div>
-          <div class="btn-reserved">
-            <a href="#">Reserved</a>
-          </div>
-        </div>
-        <div class="rare-find">
-          <i class="fa fa-gem"></i>
-          <div class="text">
-            <h3>This is a rare find</h3>
-            <p>Kathryn's place on Airbnb is usually fully booked.</p>
+          <div class="rare-find">
+            <i class="fa fa-gem"></i>
+            <div class="text">
+              <h3>This is a rare find</h3>
+              <p>Kathryn's place on Airbnb is usually fully booked.</p>
+            </div>
           </div>
         </div>
       </div>

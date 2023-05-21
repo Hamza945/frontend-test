@@ -14,6 +14,7 @@ import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
 import { MainContentCardComponent } from './components/main-content-card/main-content-card.component';
 import { FormsModule } from '@angular/forms';
 import { SearchFilterComponent } from './components/search-filter/search-filter.component';
+import { RoomDetailsComponent } from './components/room-details/room-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { SearchFilterComponent } from './components/search-filter/search-filter.
     FooterComponent,
     SidemenuComponent,
     MainContentCardComponent,
-    SearchFilterComponent
+    SearchFilterComponent,
+    RoomDetailsComponent
   ],
   imports: [
     BrowserModule,
