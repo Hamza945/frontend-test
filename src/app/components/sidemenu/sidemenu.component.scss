@@ -1,32 +1,3 @@
-/*
-.nav.nav-pills {
-    width: auto;
-    min-width: 30%;
-    border-right: 1px solid #1111111a;
-    li {
-        a {
-            span.d-sm-inline {
-                display: none !important;
-            }
-        }
-        &.active{
-            width: 100%;
-            border-right: 2px solid rgb(255, 56, 92);
-        }
-    }
-}
-
-.nav.nav-pills:hover {
-    width: 100% ;
-    li {
-        a {
-            span.d-sm-inline {
-                display: inline-block !important;
-            }
-        }
-    }
-}*/
-
 .sideMenu-holder {
   width: 88px;
   transition: all 0.5s ease-in;
@@ -60,10 +31,7 @@
         width: 100%;
         a {
           width: 100%;
-          place-content: center flex-start;
-          align-items: center;
-          display: flex;
-          flex-flow: row nowrap;
+          display: inline-block;
           gap: 12px;
           height: 48px;
           overflow: visible;
@@ -75,7 +43,14 @@
           span {
             visibility: hidden;
             transition: all 0.2s ease-in;
-
+            color: #717171;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          svg {
+            padding-left: 15px;
+            margin-right: 5px;
+            width: auto;
           }
           i {
             padding-left: 15px;
