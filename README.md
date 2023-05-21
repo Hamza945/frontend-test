@@ -5,9 +5,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Run Local App
 
 ### Steps
-### 1- Clone the project usine git command "git clone https://github.com/Hamza945/frontend-test.git"
-### 2- Run `npm install` for install all required packges.
-### 3- Run `npm start`
+  Following Steps are Required To Run The App
+* 1- Clone the project usine git command "git clone https://github.com/Hamza945/frontend-test.git"
+* 2- Run `npm install` for install all required packges.
+* 3- Run `npm start`
 
 ## Development server
 
